@@ -6,16 +6,25 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Mis Redes Sociales</title>
     <style>
+        /* Eliminamos márgenes y rellenos innecesarios */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box; /* Para evitar problemas con el tamaño de los elementos */
+        }
+        
         body {
             font-family: Arial, sans-serif;
             background-color: #f4f4f9;
             display: flex;
-            flex-direction: column; /* Asegura que los elementos se coloquen verticalmente */
+            flex-direction: column;
             justify-content: center;
             align-items: center;
             height: 100vh;
             margin: 0;
+            padding-bottom: 40px; /* Aseguramos espacio al final para que no se solape */
         }
+        
         .container {
             text-align: center;
             background-color: #ffffff;
@@ -25,10 +34,12 @@
             width: 300px;
             margin-bottom: 20px; /* Espacio entre los contenedores */
         }
+        
         h1 {
             color: #333;
             margin-bottom: 20px;
         }
+        
         .social-links a {
             display: block;
             background-color: #0073e6;
@@ -40,19 +51,38 @@
             font-size: 18px;
             transition: background-color 0.3s;
         }
+        
         .social-links a:hover {
             background-color: #005bb5;
         }
+
+        .profile-img {
+            width: 120px; /* Tamaño de la imagen */
+            height: 120px; /* Tamaño de la imagen */
+            border-radius: 20%; /* Bordes redondeados */
+            margin-bottom: 20px; /* Espacio entre la imagen y los enlaces */
+            object-fit: cover; /* Asegura que la imagen no se deforme */
+        }
+
         .footer {
-            margin-top: 20px;
+            width: 100%;
+            text-align: center;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            background-color: #ffffff;
+            padding: 10px 0;
+            border-top: 2px solid #0073e6; /* Línea que cubre toda la página */
+        }
+
+        .footer p {
             font-size: 14px;
             color: #333;
-            text-align: center;
         }
     </style>
 </head>
 <body>
-
+    <img src="media/coche.jpg" alt="Imagen de perfil" class="profile-img">
     <div class="container">
         <h1>Mis Redes Sociales</h1>
         <div class="social-links">
@@ -60,15 +90,10 @@
             <a href="https://twitter.com/tuusuario" target="_blank">Twitter</a>
             <a href="https://www.facebook.com/tuusuario" target="_blank">Facebook</a>
             <a href="https://www.linkedin.com/in/tuusuario" target="_blank">LinkedIn</a>
+            <a href="video.html" target="_blank">OnlyFans</a>
         </div>
     </div>
     
-    <div class="container">
-        <p style="color: #ffffff; background-color: #0073e6; padding: 10px; border-radius: 5px; font-size: 18px;">
-            Hola
-        </p>
-    </div>
-
     <div class="footer">
         <p>Aníbal Romero - 2025</p>
     </div>
