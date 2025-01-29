@@ -5,11 +5,74 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Reproducción Automática de Video</title>
+    <style>
+        * {
+            box-sizing: border-box; /* Asegura que el padding y el border se incluyan en el ancho y alto total */
+        }
+        html, body {
+            height: 100%; /* Asegura que el body ocupe el 100% de la altura de la ventana */
+            margin: 0; /* Elimina el margen por defecto */
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to bottom, #4a90e2, #003366);
+            color: #000000;
+            display: flex;
+            flex-direction: column; /* Apila los elementos verticalmente */
+        }
+        header {
+            background-color: #104888;
+            color: #fff;
+            padding: 30px;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+        .video-container {
+            flex: 1; /* Permite que el contenedor ocupe el espacio restante */
+            display: flex;
+            justify-content: center;
+            align-items: center; /* Centra el video verticalmente */
+            margin: 30px; /* Espaciado alrededor del contenedor */
+        }
+        .text-container {
+            display: flex;
+            flex-direction: column; /* Apila los elementos dentro del contenedor verticalmente */
+            justify-content: center;
+            align-items: center; /* Centra el contenido verticalmente */
+            margin: 30px; /* Espaciado alrededor del contenedor */
+            background-color: white; /* Fondo blanco para el texto */
+            padding: 20px; /* Espaciado interno */
+            border-radius: 8px; /* Bordes redondeados */
+        }
+        footer {
+            background-color: #4a90e2;
+            color: #fff;
+            padding: 10px;
+            font-size: 0.9em;
+            text-align: center; /* Centra el texto del footer */
+        }
+    </style>
 </head>
 <body>
-    <video width="100%" height="auto" autoplay muted loop>
-        <source src="media/rickroll.mp4" type="video/mp4">
-        Tu navegador no soporta el formato de video.
-    </video>
+    <header>
+        <h1>Reproducción Automática de Video</h1>
+    </header>
+
+    <div class="video-container">
+        <video width="100%" height="auto" autoplay muted loop>
+            <source src="media/rickroll.mp4" type="video/mp4">
+            Tu navegador no soporta el formato de video.
+        </video>
+    </div>
+    <div class="text-container">
+        <p> Que querías ver pillín</p>
+        <p>Imagínate la música vale, que si le ponía sonido no se reproducía automáticamente.</p>
+    </div>
+
+    <footer>
+        2025 Aníbal Romero
+    </footer>
 </body>
 </html>
