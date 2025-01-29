@@ -46,6 +46,11 @@
             padding: 20px; /* Espaciado interno */
             border-radius: 8px; /* Bordes redondeados */
         }
+        video {
+            max-width: 700px; /* Limita el ancho del video a 700px */
+            width: 100%; /* Mantiene la responsividad */
+            height: auto; /* Mantiene la proporción del video */
+        }
         footer {
             background-color: #4a90e2;
             color: #fff;
@@ -61,7 +66,7 @@
     </header>
 
     <div class="video-container">
-        <video width="100%" height="auto" autoplay muted loop>
+        <video autoplay muted loop>
             <source src="media/rickroll.mp4" type="video/mp4">
             Tu navegador no soporta el formato de video.
         </video>
