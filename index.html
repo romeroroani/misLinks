@@ -1,105 +1,111 @@
-<!DOCTYPE html> <!-- Declaración del tipo de documento HTML -->
-<html lang="es"> <!-- Inicio del documento HTML con idioma español -->
+<!DOCTYPE html>
+<html lang="es">
 <head>
-    <meta charset="UTF-8"> <!-- Define la codificación de caracteres como UTF-8 para soportar caracteres especiales -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Ajusta el diseño para dispositivos móviles -->
-    <meta http-equiv="X-UA-Compatible" content="ie=edge"> <!-- Garantiza compatibilidad con Internet Explorer -->
-    <title>Mis Redes Sociales</title> <!-- Título de la página que aparece en la pestaña del navegador -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mis Redes Sociales</title>
     <style>
-        /* Establece los márgenes y rellenos en 0 para todos los elementos */
-        * {
+        body {
+            font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            box-sizing: border-box; /* Asegura que el tamaño de los elementos incluya el borde y el relleno */
+            background: linear-gradient(to bottom, #4a90e2, #003366);
+            color: #333;
+            text-align: center;
         }
-        
-        body {
-            font-family: Arial, sans-serif; /* Define la fuente del texto */
-            background-color: #f4f4f9; /* Color de fondo de la página */
-            display: flex; /* Usa flexbox para centrar el contenido */
-            flex-direction: column; /* Organiza los elementos en columna */
-            justify-content: center; /* Centra verticalmente */
-            align-items: center; /* Centra horizontalmente */
-            height: 100vh; /* Ocupa toda la altura de la ventana */
+        header {
+            background-color: #104888;
+            color: #fff;
+            padding: 30px;
+        }
+        header h1 {
             margin: 0;
-            padding-bottom: 0px; /* Agrega espacio al final de la página */
+            font-size: 2.5em;
         }
-        
-        .container {
-            text-align: center; /* Centra el texto dentro del contenedor */
-            background-color: #ffffff; /* Fondo blanco para el contenedor */
-            padding: 20px; /* Espaciado interno */
-            border-radius: 10px; /* Bordes redondeados */
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra para un efecto elevado */
-            width: 300px; /* Ancho del contenedor */
-            margin-bottom: 20px; /* Espaciado entre los contenedores */
+        #profile-photo {
+            display: flex;
+            justify-content: center;
+            padding: 20px;
         }
-        
-        h1 {
-            color: #333; /* Color del texto */
-            margin-bottom: 20px; /* Espaciado inferior del título */
+        #profile-photo img {
+            border-radius: 10%;
+            max-width: 200px;
+            height: auto;
         }
-        
+        section {
+            opacity: 0;
+            padding: 20px;
+            max-width: 600px;
+            margin: 30px auto;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            transform: translateX(-100%);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+        .slide-in {
+            opacity: 1;
+            transform: translateX(0);
+        }
         .social-links a {
-            display: block; /* Cada enlace ocupa una línea completa */
-            background-color: #0073e6; /* Color de fondo de los enlaces */
-            color: white; /* Color del texto */
-            text-decoration: none; /* Quita el subrayado de los enlaces */
-            padding: 15px; /* Espaciado interno */
-            margin: 10px 0; /* Espaciado entre enlaces */
-            border-radius: 5px; /* Bordes redondeados */
-            font-size: 18px; /* Tamaño del texto */
-            transition: background-color 0.3s; /* Animación al pasar el cursor */
+            display: block;
+            background-color: #4a90e2;
+            color: white;
+            text-decoration: none;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 5px;
+            font-size: 18px;
+            transition: background-color 0.3s;
         }
-        
         .social-links a:hover {
-            background-color: #005bb5; /* Color de fondo al pasar el cursor */
+            background-color: #357ABD;
         }
-
-        .profile-img {
-            width: 120px; /* Ancho de la imagen de perfil */
-            height: 120px; /* Alto de la imagen de perfil */
-            border-radius: 20%; /* Bordes redondeados */
-            margin-bottom: 20px; /* Espaciado inferior */
-            object-fit: cover; /* Asegura que la imagen mantenga proporciones */
-        }
-
-        .footer {
-            width: 100%; /* Ocupa todo el ancho */
-            text-align: center; /* Centra el texto */
-            position: absolute; /* Se fija en la parte inferior */
-            bottom: 0;
-            left: 0;
-            background-color: #ffffff; /* Color de fondo del footer */
-            padding: 10px 0; /* Espaciado interno */
-            border-top: 2px solid #0073e6; /* Línea superior */
-        }
-
-        .footer p {
-            font-size: 14px; /* Tamaño del texto del footer */
-            color: #333; /* Color del texto */
+        footer {
+            background-color: #4a90e2;
+            color: #fff;
+            padding: 10px;
+            font-size: 0.9em;
         }
     </style>
 </head>
 <body>
-    <!-- Imagen de perfil -->
-    <img src="media/coche.jpg" alt="Imagen de perfil" class="profile-img">
-    
-    <!-- Contenedor principal -->
-    <div class="container">
-        <h1>Mis Redes Sociales</h1> <!-- Título principal -->
-        <div class="social-links"> <!-- Sección de enlaces sociales -->
+    <header>
+        <h1>Mis Redes Sociales</h1>
+    </header>
+
+    <div id="profile-photo">
+        <img src="media/coche.jpg" alt="Imagen de perfil">
+    </div>
+
+    <section id="links">
+        <h2>Encuéntrame en</h2>
+        <div class="social-links">
             <a href="https://www.instagram.com/tuusuario" target="_blank">Instagram</a>
             <a href="https://twitter.com/tuusuario" target="_blank">Twitter</a>
             <a href="https://www.facebook.com/tuusuario" target="_blank">Facebook</a>
             <a href="https://www.linkedin.com/in/tuusuario" target="_blank">LinkedIn</a>
-            <a href="video.html" target="_blank">OnlyFans</a> <!-- Enlace a otro archivo interno -->
+            <a href="video.html" target="_blank">OnlyFans</a>
         </div>
-    </div>
-    
-    <!-- Pie de página -->
-    <div class="footer">
-        <p>Aníbal Romero - 2025</p> <!-- Nombre del autor y año -->
-    </div>
+    </section>
+
+    <footer>
+        2025 Aníbal Romero
+    </footer>
+
+    <script>
+        function animateOnScroll() {
+            const sections = document.querySelectorAll("section");
+            sections.forEach(section => {
+                const sectionPosition = section.getBoundingClientRect().top;
+                const screenPosition = window.innerHeight / 1.2;
+                if (sectionPosition < screenPosition) {
+                    section.classList.add("slide-in");
+                }
+            });
+        }
+        window.addEventListener("scroll", animateOnScroll);
+        window.addEventListener("load", animateOnScroll);
+    </script>
 </body>
 </html>
