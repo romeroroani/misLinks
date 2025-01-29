@@ -32,23 +32,22 @@
             max-width: 200px;
             height: auto;
         }
+        .container {
+            margin: 30px; /* Margen de 30px alrededor del contenedor */
+            display: flex;
+            justify-content: center; /* Centra el contenido dentro del contenedor */
+        }
         section {
-            opacity: 0;
             padding: 20px;
             max-width: 600px;
-            margin: 30px auto;
             background-color: white;
             border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-            transform: translateX(-100%);
-            transition: opacity 0.6s ease, transform 0.6s ease;
-        }
-        .slide-in {
-            opacity: 1;
-            transform: translateX(0);
+            width: 100%; /* Asegura que el contenedor use el 100% del ancho disponible */
+            box-sizing: border-box; /* Incluye el padding en el ancho total */
         }
         .social-links a {
-            display: block;
+            display: flex; /* Change to flex to align items */
+            align-items: center; /* Center items vertically */
             background-color: #4a90e2;
             color: white;
             text-decoration: none;
@@ -57,6 +56,10 @@
             border-radius: 5px;
             font-size: 18px;
             transition: background-color 0.3s;
+        }
+        .social-links a img {
+            max-width: 20px; /* Set image size */
+            margin-right: 10px; /* Space between image and text */
         }
         .social-links a:hover {
             background-color: #357ABD;
@@ -78,34 +81,21 @@
         <img src="media/coche.jpg" alt="Imagen de perfil">
     </div>
 
-    <section id="links">
-        <h2>Encuéntrame en</h2>
-        <div class="social-links">
-            <a href="https://www.instagram.com/tuusuario" target="_blank">Instagram</a>
-            <a href="https://twitter.com/tuusuario" target="_blank">Twitter</a>
-            <a href="https://www.facebook.com/tuusuario" target="_blank">Facebook</a>
-            <a href="https://www.linkedin.com/in/tuusuario" target="_blank">LinkedIn</a>
-            <a href="video.html" target="_blank">OnlyFans</a>
-        </div>
-    </section>
+    <div class="container">
+        <section id="links">
+            <h2>Encuéntrame en</h2>
+            <div class="social-links">
+                <a href="https://www.instagram.com/animax_888" target="_blank"><img src="media/icono-instagram.png" alt="Instagram">Instagram</a>
+                <a href="https://twitter.com/tuusuario" target="_blank"><img src="media/icono-twitter.png" alt="Twitter">Twitter</a>
+                <a href="https://www.facebook.com/tuusuario" target="_blank"><img src="media/icono-facebook.png" alt="Facebook">Facebook</a>
+                <a href="https://www.linkedin.com/in/tuusuario" target="_blank"><img src="media/icono-linkedin.png" alt="LinkedIn">LinkedIn</a>
+                <a href="video.html" target="_blank"><img src="media/icono-onlyfans.png" alt="OnlyFans">OnlyFans</a>
+            </div>
+        </section>
+    </div>
 
     <footer>
         2025 Aníbal Romero
     </footer>
-
-    <script>
-        function animateOnScroll() {
-            const sections = document.querySelectorAll("section");
-            sections.forEach(section => {
-                const sectionPosition = section.getBoundingClientRect().top;
-                const screenPosition = window.innerHeight / 1.2;
-                if (sectionPosition < screenPosition) {
-                    section.classList.add("slide-in");
-                }
-            });
-        }
-        window.addEventListener("scroll", animateOnScroll);
-        window.addEventListener("load", animateOnScroll);
-    </script>
 </body>
 </html>
